@@ -31,6 +31,7 @@ namespace WebAPI
             services.AddDbContext<AuthenticationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AuthApiDb")));
 
             services.AddDefaultIdentity<ApplicationUser>()
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<AuthenticationDbContext>();
             services.Configure<IdentityOptions>(options =>
             {
