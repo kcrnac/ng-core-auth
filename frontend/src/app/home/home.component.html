@@ -1,0 +1,18 @@
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand text-white">ng-core-auth</a>
+    <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
+</nav>
+
+<div *ngIf="userDetails" class="card m-5" style="width: 18rem;">
+    <ul class="list-group">
+        <li class="list-group-item">
+            <strong>Username : </strong>{{userDetails.username}}
+        </li>
+        <li class="list-group-item">
+            <strong>Full name : </strong>{{userDetails.fullName}}
+        </li>
+        <li class="list-group-item">
+            <strong>Email : </strong>{{userDetails.email}}
+        </li>
+    </ul>
+</div>
